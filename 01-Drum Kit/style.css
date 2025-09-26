@@ -1,3 +1,6 @@
+/*========================
+           Reset
+======================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +10,18 @@ img {
   width: 100%;
   height: auto;
 }
+/*========================
+        General
+======================== */
+
 body {
   background: url("assets/images/background.jpg") center/cover no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 30vh;
+  gap: 25vh;
   padding: 20px;
 }
 main {
@@ -50,9 +57,25 @@ button {
   font-size: 2rem;
   border-radius: 10px;
   min-width: 100px;
+  max-width: 150px;
   cursor: pointer;
+  box-shadow: none;
+  transform: scale(1);
+  transition: all 0.5s linear;
 }
 button span {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.7);
+}
+.playing {
+  border-color: rgb(208, 208, 15);
+  box-shadow: 0 0 10px 10px rgb(208, 208, 15);
+  transform: scale(1.1);
+  transition: all 0.1s ease-out;
+}
+
+@media (max-width: 800px) {
+  body {
+    background: url("assets/images/background.jpg") center/cover repeat;
+  }
 }
